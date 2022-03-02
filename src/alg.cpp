@@ -22,11 +22,8 @@ uint64_t fact(uint16_t n) {
 }
 
 double calcItem(double x, uint16_t n) {
-    double ans = 1.;
-    for (uint64_t i = 0; i <= n; i++) {
-        ans += pown(x, n) / fact(n);
-    }
-    return ans;
+  if (n == 0 || x == 0) return 0;
+  return pown(x, n) / fact(n);
 }
 
 double expn(double x, uint16_t count) {
