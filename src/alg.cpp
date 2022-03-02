@@ -29,7 +29,7 @@ double calcItem(double x, uint16_t n) {
     return ans;
 }
 
-double exp(double x, uint16_t count) {
+double expn(double x, uint16_t count) {
     double ans = 1.;
     for (uint64_t i = 1; i <= count; i++) {
         ans += pown(x, i) / fact(i);
@@ -37,7 +37,7 @@ double exp(double x, uint16_t count) {
     return ans;
 }
 
-double sin(double x, uint16_t count) {
+double sinn(double x, uint16_t count) {
     double ans = x;
     for (uint64_t i = 2; i <= count; i++) {
         ans += pown(-1, i-1) * (pown(x, i*2-1) / fact(i*2-1));
@@ -45,7 +45,7 @@ double sin(double x, uint16_t count) {
     return ans;
 }
 
-double cos(double x, uint16_t count) {
+double cosn(double x, uint16_t count) {
     double ans = 1;
     for (uint64_t i = 2; i <= count; i++) {
         ans += pown(-1, i - 1) * (pown(x, i * 2 - 2) / fact(i * 2 - 2));
