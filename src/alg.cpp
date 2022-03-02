@@ -32,7 +32,7 @@ double calcItem(double x, uint16_t n) {
 double exp(double x, uint16_t count) {
     double ans = 1.;
     for (uint64_t i = 1; i <= count; i++) {
-        ans += pow(x, i) / fact(i);
+        ans += pown(x, i) / fact(i);
     }
     return ans;
 }
